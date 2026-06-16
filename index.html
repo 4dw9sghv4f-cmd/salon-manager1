@@ -14,19 +14,23 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #F7F5F0; }
     #root { min-height: 100vh; }
+    #loading { display:flex; align-items:center; justify-content:center; height:100vh; font-family:sans-serif; color:#1A2744; flex-direction:column; gap:12px; }
   </style>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div id="loading">
+      <div style="font-size:40px">✂️</div>
+      <div style="font-size:16px;font-weight:700">Salon Manager</div>
+      <div style="font-size:12px;color:#888">読み込み中...</div>
+    </div>
+  </div>
 
-  <!-- React 18 -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <!-- Recharts -->
-  <script src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js" crossorigin></script>
-  <!-- Babel (JSX変換) -->
-  <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.5.0/Recharts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
 
-  <script type="text/babel" src="app.jsx" data-type="module"></script>
+  <script type="text/babel" src="app.jsx"></script>
 </body>
 </html>
